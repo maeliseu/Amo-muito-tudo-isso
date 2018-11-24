@@ -501,8 +501,7 @@ void remover(int x){
 
 void limpar_memorias(){
     
-    delete aux_idoso;
-    delete aux_ped;
+    
     delete aux_esp;
     delete tail_geral;
     delete tail_idoso;
@@ -511,14 +510,14 @@ void limpar_memorias(){
     delete votos;
     delete prev_esp;
     delete prev_ped;
-// ------------------------------
+// --------MMMMMMMM----------------------
     while (head_geral != NULL){ 
         aux_geral= head_geral;
         head_geral = aux_geral->proximo;
         aux_geral->proximo = NULL;
         delete aux_geral;
     }
-    delete aux_geral;
+    
 
     while (head_idoso != NULL) {
         aux_idoso= head_idoso;
@@ -536,7 +535,7 @@ void limpar_memorias(){
 
 
 
-// ------------------------------
+// -------MMMMMMMM-----------------------
 
     
    
