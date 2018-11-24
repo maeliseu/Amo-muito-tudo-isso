@@ -116,7 +116,7 @@ void mostrar_filas(){
         cout<<" |                               |"<<endl;
         cout<<" |          FILA IDOSO           |"<<endl;
     for(aux_idoso = head_idoso; aux_idoso != NULL; aux_idoso=aux_idoso->proximo){
-        cout<<" | "<<aux_idoso->nome<<" - "<< aux_idoso->idade <<" Anos"<<endl;
+        cout<<" | "<<aux_idoso->nome<<" - "<< aux_idoso->idade <<" Anos\t\t|"<<endl;
         cout<<" |                               |"<<endl;
     }
     cout<<" |_______________________________|"<<endl;
@@ -135,10 +135,10 @@ void mostrar_filas(){
         cout<<" |                               |"<<endl;
         cout<<" |          FILA GERAL           |"<<endl;
     for(aux_geral = head_geral;aux_geral != NULL; aux_geral=aux_geral->proximo){
-        cout<<" | "<<aux_geral->nome<<" - "<< aux_geral->idade <<" Anos"<<endl;
+        cout<<" | "<<aux_geral->nome<<" - "<< aux_geral->idade <<" Anos\t\t\t |"<<endl;
         cout<<" |                               |"<<endl;
     }
-    cout<<" |_______________________________|"<<endl;
+        cout<<" |_______________________________|"<<endl;
     }
     cout<<endl;
     cout<<endl;
@@ -154,9 +154,9 @@ void mostrar_filas(){
         cout<<" |                               |"<<endl;
         cout<<" |         FILA ESPERA           |"<<endl;
     for(aux_esp = head_esp; aux_esp!= NULL; aux_esp=aux_esp->proximo){
-        cout<<" | NOME: "<<aux_esp->nome<<endl;
-        cout<<" | NUMERO: "<<aux_esp->numero<<"                     |"<<endl;
-        cout<<" | TEMPO: "<<aux_esp->tempo<<" Mins                 |"<<endl;
+        cout<<" | NOME: "<<aux_esp->nome<<"\t|"<<endl;
+        cout<<" | NUMERO: "<<aux_esp->numero<<"\t\t|"<<endl;
+        cout<<" | TEMPO: "<<aux_esp->tempo<<" Mins\t\t|"<<endl;
         cout<<" |_______________________________|"<<endl;
         cout<<" |                               |"<<endl;
     }
@@ -553,30 +553,20 @@ int main(){
     string nome;
 
     do{
-
-    cout<<"       _________________      "<<endl;
-    cout<<"      ( ' ' ' '  ' ' ' ')     "<<endl;
-    cout<<"     (_'_'_'_'_'__'_'_'_')    "<<endl;
-    cout<<"     /#/#/#/#/#/#/#/#/#/#    "<<endl;
-    cout<<"     =_=_=_=_=_=_=_=_=_=_=   "<<endl;
-    cout<<"     ( ORLANDO'S  BURGER )    "<<endl;
-    cout<<"     (___________________)    "<<endl;
-    cout<<"     @@@@@@@@@@@@@@@@@@@@@   "<<endl;
-    cout<<"      ___________________    "<<endl;
-    cout<<"     (___________________)   "<<endl;
     cout<<endl;
+    cout<<"\tAmo Muito Tudo isso :"<<endl;
     cout<<" ____________________________"<<endl;
     cout<<" |                          |"<<endl;
-    cout<<" |     1- NOVO CLIENTE      |"<<endl;
-    cout<<" |    2- BUSCAR NA FILA     |"<<endl;
-    cout<<" |     3- FAZER PEDIDO      |"<<endl;
-    cout<<" |    4- CHAMAR PEDIDO      |"<<endl;
-    cout<<" |    5- MOSTRAR PEDIDOS    |"<<endl;
-    cout<<" |     6- MOSTRAR VOTOS     |"<<endl;
-    cout<<" |     7- MOSTRAR FILAS     |"<<endl;
-    cout<<" |    0- SAIR DO PROGRAMA   |"<<endl;
+    cout<<" | 1-\tNOVO CLIENTE\t\t|"<<endl;
+    cout<<" | 2-\tBUSCAR NA FILA\t\t|"<<endl;
+    cout<<" | 3-\tFAZER PEDIDO\t\t|"<<endl;
+    cout<<" | 4-\tCHAMAR PEDIDO\t\t|"<<endl;
+    cout<<" | 5-\tMOSTRAR PEDIDOS\t\t|"<<endl;
+    cout<<" | 6-\tMOSTRAR VOTOS\t\t|"<<endl;
+    cout<<" | 7-\tMOSTRAR FILAS\t\t|"<<endl;
+    cout<<" | 0-\tSAIR DO PROGRAMA\t|"<<endl;
     cout<<" |__________________________|"<<endl;
-    cout<<" |_OPÇÂO: ";
+    cout<<" |\tOPÇÂO:\t";
     cin>>seletor;
     system("CLS");
     cout<<endl;
@@ -655,18 +645,7 @@ int main(){
 
     }while(seletor!=0);
     system("CLS");
-    cout<<"  _____   __    __   _______       __    __   __    __   __   ________   _______  "<<endl;
-    cout<<" |  _  | |  |  |  | |  ___  |     |  |  |  | |  |  |  | |  | |__   ___| |  ___  | "<<endl;
-    cout<<" | |_| | |  \\ /   | | |   | |     |  \\ /   | |  |  |  | |  |    |  |    | |   | | "<<endl;
-    cout<<" |  _  | | |\\  /| | | |   | |     | |\\  /| | |  |  |  | |  |    |  |    | |   | | "<<endl;
-    cout<<" | | | | | | \\/ | | | |___| |     | | \\/ | | |  |__|  | |  |    |  |    | |___| | "<<endl;
-    cout<<" |_| |_| |_|    |_| |_______|     |_|    |_| |________| |__|    |__|    |_______| "<<endl;
-    cout<<"  ________   __    __   ______    _______      __   ______   ______   _______  ___ "<<endl;
-    cout<<" |__   ___| |  |  |  | |  _ __\\  |  ___  |    |  | |  ____| |   ___| |  ___  ||   |"<<endl;
-    cout<<"    |  |    |  |  |  | | |   | | | |   | |    |  | | |____  | |____  | |   | ||   |"<<endl;
-    cout<<"    |  |    |  |  |  | | |   | | | |   | |    |  | |____  | |____  | | |   | ||   |"<<endl;
-    cout<<"    |  |    |  |__|  | | |___| | | |___| |    |  |  ____| |  ____| | | |___| | \\ /"<<endl;
-    cout<<"    |__|    |________| |______/  |_______|    |__| |______| |______| |_______| (_)"<<endl;
+    cout<<"Amo Muito Tudo isso !!!!"<<endl;
     system("pause");
     limpar_memorias();
 	return 0;
