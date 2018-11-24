@@ -500,11 +500,7 @@ void remover(int x){
 }
 
 void limpar_memorias(){
-    Cliente Marvel;
-    Cliente RIP;
-    Pedido Stan;
-    Espera Lee;
-    delete aux_geral;
+    
     delete aux_idoso;
     delete aux_ped;
     delete aux_esp;
@@ -515,28 +511,35 @@ void limpar_memorias(){
     delete votos;
     delete prev_esp;
     delete prev_ped;
+// ------------------------------
+    while (head_geral != NULL){ 
+        aux_geral= head_geral;
+        head_geral = aux_geral->proximo;
+        aux_geral->proximo = NULL;
+        delete aux_geral;
+    }
+    delete aux_geral;
 
-    while (head_geral->proximo != NULL) {
-        Marvel = head_geral;
-        head_geral = head_geral->proximo;
-        // cout << thanos->valor << " -- " << head->valor << endl<< endl;
-        Marvel->proximo = NULL;
-        delete Marvel;
+    while (head_idoso != NULL) {
+        aux_idoso= head_idoso;
+        head_idoso = aux_idoso->proximo;
+        aux_idoso->proximo = NULL;
+        delete aux_idoso;
     }
-    while (head_idoso->proximo != NULL) {
-        RIP = head_idoso;
-        head_idoso = head_idoso->proximo;
-        // cout << thanos->valor << " -- " << head->valor << endl<< endl;
-        RIP->proximo = NULL;
-        delete RIP;
+
+    while (head_ped != NULL) {
+        aux_ped= head_ped;
+        head_ped = aux_ped->proximo;
+        aux_ped->proximo = NULL;
+        delete aux_ped;
     }
-    while (head_ped->proximo != NULL) {
-        Stan = head_ped;
-        head_ped = head_ped->proximo;
-        // cout << thanos->valor << " -- " << head->valor << endl<< endl;
-        Stan->proximo = NULL;
-        delete Stan;
-    }
+
+
+
+// ------------------------------
+
+    
+   
      while (head_esp->proximo != NULL) {
         Lee = head_esp;
         head_esp = head_esp->proximo;
