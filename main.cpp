@@ -143,24 +143,24 @@ void mostrar_filas(){
     cout<<endl;
     cout<<endl;
 
-       if(vazio_esp()) {
+   if(vazio_esp()) {
         cout<<"  _______________________________"<<endl;
         cout<<" |                               |"<<endl;
         cout<<" |      FILA ESPERA VAZIA!!!     |"<< endl;
         cout<<" |_______________________________|"<<endl;
         cout << endl;
     } else {
-        cout<<"  _______________________________"<<endl;
-        cout<<" |                               |"<<endl;
-        cout<<" |         FILA ESPERA           |"<<endl;
-    for(aux_esp = head_esp; aux_esp!= NULL; aux_esp=aux_esp->proximo){
-        cout<<" | NOME: "<<aux_esp->nome<<"\t|"<<endl;
-        cout<<" | NUMERO: "<<aux_esp->numero<<"\t\t|"<<endl;
-        cout<<" | TEMPO: "<<aux_esp->tempo<<" Mins\t\t|"<<endl;
+            cout<<"  _______________________________"<<endl;
+            cout<<" |                               |"<<endl;
+            cout<<" |         FILA ESPERA           |"<<endl;
+        for(aux_esp = head_esp; aux_esp!= NULL; aux_esp=aux_esp->proximo){
+            cout<<" | NOME: "<<aux_esp->nome<<"\t|"<<endl;
+            cout<<" | NUMERO: "<<aux_esp->numero<<"\t\t|"<<endl;
+            cout<<" | TEMPO: "<<aux_esp->tempo<<" Mins\t\t|"<<endl;
+            cout<<" |_______________________________|"<<endl;
+            cout<<" |                               |"<<endl;
+        }
         cout<<" |_______________________________|"<<endl;
-        cout<<" |                               |"<<endl;
-    }
-     cout<<" |_______________________________|"<<endl;
     }
     cout << endl;
     cout << endl;
@@ -500,9 +500,8 @@ void remover(int x){
 }
 
 void limpar_memorias(){
-    
-    
-    delete aux_esp;
+
+
     delete tail_geral;
     delete tail_idoso;
     delete tail_ped;
@@ -511,13 +510,13 @@ void limpar_memorias(){
     delete prev_esp;
     delete prev_ped;
 // --------MMMMMMMM----------------------
-    while (head_geral != NULL){ 
+    while (head_geral != NULL){
         aux_geral= head_geral;
         head_geral = aux_geral->proximo;
         aux_geral->proximo = NULL;
         delete aux_geral;
     }
-    
+
 
     while (head_idoso != NULL) {
         aux_idoso= head_idoso;
@@ -534,18 +533,14 @@ void limpar_memorias(){
     }
 
 
+    while (head_esp->proximo != NULL) {
+        aux_esp = head_esp;
+        head_esp = aux_esp->proximo;
+        aux_esp->proximo = NULL;
+        delete aux_esp;
+    }
 
 // -------MMMMMMMM-----------------------
-
-    
-   
-     while (head_esp->proximo != NULL) {
-        Lee = head_esp;
-        head_esp = head_esp->proximo;
-        // cout << thanos->valor << " -- " << head->valor << endl<< endl;
-        Lee->proximo = NULL;
-        delete Lee;
-    }
 
 }
 
