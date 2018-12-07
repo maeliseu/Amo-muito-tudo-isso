@@ -15,7 +15,7 @@ typedef struct NO{
 typedef struct NODOIS{
  		int numero;
  		int opcao;
- 		int tempo = 0;
+ 		int tempo;  //	= 0;
  		int vtotal;
 		struct NODOIS* proximo;
 }*Pedido;
@@ -119,7 +119,7 @@ void mostrar_filas(){
         cout<<" | "<<aux_idoso->nome<<" - "<< aux_idoso->idade <<" Anos\t\t|"<<endl;
         cout<<" |                               |"<<endl;
     }
-    cout<<" |_______________________________|"<<endl;
+    	cout<<" |_______________________________|"<<endl;
     }
     cout<<endl;
     cout<<endl;
@@ -160,7 +160,7 @@ void mostrar_filas(){
             cout<<" |_______________________________|"<<endl;
             cout<<" |                               |"<<endl;
         }
-        cout<<" |_______________________________|"<<endl;
+        	cout<<" |_______________________________|"<<endl;
     }
     cout << endl;
     cout << endl;
