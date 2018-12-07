@@ -456,8 +456,8 @@ void chamar(int numero_chamado){
                 cout<<" | TEMPO: "<<aux_ped->tempo<<" Mins"<<endl;
                 cout<<" |_______________________________|"<<endl;
             }
-               //DELETAR DAS FILAS PEDIDOS E ESPERA
-              //temp = head;
+//DELETAR DAS FILAS PEDIDOS E ESPERA
+
               if(select != 0){
                   prev_ped->proximo=aux_ped->proximo;
                   aux_ped->proximo = NULL;
@@ -492,23 +492,16 @@ void remover(int x){
           aux_geral->proximo = NULL;
           delete aux_geral;
         }
-        /*
-        aux_idoso = head_idoso;
-        NO *prev;
-        prev->proximo = aux_idoso->proximo;
-        delete aux_idoso;*/
+
 }
 
 void limpar_memorias(){
 
+    votos=NULL;
+    prev_esp=NULL;
+    prev_ped=NULL;
 
-    delete tail_geral;
-    delete tail_idoso;
-    delete tail_ped;
-    delete tail_esp;
-    delete votos;
-    delete prev_esp;
-    delete prev_ped;
+    // cout << "1" << endl;
 // --------MMMMMMMM----------------------
     while (head_geral != NULL){
         aux_geral= head_geral;
@@ -516,6 +509,12 @@ void limpar_memorias(){
         aux_geral->proximo = NULL;
         delete aux_geral;
     }
+    head_geral=NULL;
+    tail_geral=NULL;
+
+
+//  cout << "2" << endl;
+
 
 
     while (head_idoso != NULL) {
@@ -524,6 +523,10 @@ void limpar_memorias(){
         aux_idoso->proximo = NULL;
         delete aux_idoso;
     }
+    tail_idoso=NULL;
+
+
+// cout << "3" << endl;
 
     while (head_ped != NULL) {
         aux_ped= head_ped;
@@ -531,15 +534,18 @@ void limpar_memorias(){
         aux_ped->proximo = NULL;
         delete aux_ped;
     }
+    tail_ped = NULL;
 
-
-    while (head_esp->proximo != NULL) {
+//  cout << "4" << endl;
+    while (head_esp != NULL) {
         aux_esp = head_esp;
         head_esp = aux_esp->proximo;
         aux_esp->proximo = NULL;
         delete aux_esp;
     }
+    tail_esp = NULL;
 
+//  cout << "5" << endl;
 // -------MMMMMMMM-----------------------
 
 }
